@@ -79,14 +79,14 @@ namespace License
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Application", "Run application 'C:\\QVI\\Snap-X\\SnapXOffline.bat' with arguments '' in normal mode.", new RecordItemIndex(0));
-            Host.Local.RunApplication("C:\\QVI\\Snap-X\\SnapXOffline.bat", "", "C:\\QVI\\Snap-X", false);
-            Delay.Milliseconds(0);
-            
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.SnapXUntitled' at Center.", repo.SnapXUntitled.SnapXUntitledInfo, new RecordItemIndex(1));
-            repo.SnapXUntitled.SnapXUntitled.Click();
+            //Report.Log(ReportLevel.Info, "Application", "Run application 'C:\\QVI\\Snap-X\\SnapXOffline.bat' with arguments '' in normal mode.", new RecordItemIndex(0));
+            //Host.Local.RunApplication("C:\\QVI\\Snap-X\\SnapXOffline.bat", "", "C:\\QVI\\Snap-X", false);
+            //Delay.Milliseconds(0);
+
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.Element94' at 320;17.", repo.SnapXUntitled.Element94Info, new RecordItemIndex(0));
+            repo.SnapXUntitled.Element94.Click("320;17");
             Delay.Milliseconds(200);
-            
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LMenu}'.", new RecordItemIndex(2));
             Keyboard.Press("{LMenu}");
             Delay.Milliseconds(0);

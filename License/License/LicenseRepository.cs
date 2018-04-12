@@ -96,7 +96,7 @@ namespace License
         [RepositoryFolder("e7f216c4-4f15-48b0-8400-975af4e7fa17")]
         public partial class SnapXUntitledAppFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _snapxuntitledInfo;
+            RepoItemInfo _element94Info;
 
             /// <summary>
             /// Creates a new SnapXUntitled  folder.
@@ -104,7 +104,7 @@ namespace License
             public SnapXUntitledAppFolder(RepoGenBaseFolder parentFolder) :
                     base("SnapXUntitled", "/form[@title='Snap-X - [Untitled]']", parentFolder, 30000, null, true, "e7f216c4-4f15-48b0-8400-975af4e7fa17", "")
             {
-                _snapxuntitledInfo = new RepoItemInfo(this, "SnapXUntitled", "titlebar[@accessiblerole='TitleBar']", 60000, null, "587e88dd-b9ff-4307-9db2-b6ba96b959f3");
+                _element94Info = new RepoItemInfo(this, "Element94", "element[@controlid='94']", 30000, null, "cdd2442b-1522-4f81-9b36-c35233e1647b");
             }
 
             /// <summary>
@@ -135,23 +135,23 @@ namespace License
             /// The SnapXUntitled item.
             /// </summary>
             [RepositoryItem("587e88dd-b9ff-4307-9db2-b6ba96b959f3")]
-            public virtual Ranorex.TitleBar SnapXUntitled
+            public virtual Ranorex.Unknown Element94
             {
                 get
                 {
-                    return _snapxuntitledInfo.CreateAdapter<Ranorex.TitleBar>(true);
+                    return _element94Info.CreateAdapter<Ranorex.Unknown>(true);
                 }
             }
 
             /// <summary>
-            /// The SnapXUntitled item info.
+            /// The Element94 item info.
             /// </summary>
-            [RepositoryItemInfo("587e88dd-b9ff-4307-9db2-b6ba96b959f3")]
-            public virtual RepoItemInfo SnapXUntitledInfo
+            [RepositoryItemInfo("cdd2442b-1522-4f81-9b36-c35233e1647b")]
+            public virtual RepoItemInfo Element94Info
             {
                 get
                 {
-                    return _snapxuntitledInfo;
+                    return _element94Info;
                 }
             }
         }
