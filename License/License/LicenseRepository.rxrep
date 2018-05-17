@@ -32,6 +32,24 @@ rxversion="7.0">
 			searchtimeout="60000ms">
 				/form[@title='Snap-X - [Untitled]']/titlebar[@accessiblerole='TitleBar']
 			</item>
+			<item
+			addcaps="text,nativewindow"
+			capname="text"
+			id="3bf47ce7-aba4-4b05-9696-f5829ed08b6f"
+			name="MeasureText"
+			refimgid="406bfa46-5508-46ed-9573-a14662aaa8b3"
+			searchtimeout="30000ms">
+				/form[@title='Snap-X - [Untitled]']/container[@controlid='59648']/form[@title='Untitled']//text[@controlid='2394']
+			</item>
+			<item
+			addcaps="button,nativeitem,checkable"
+			capname="button"
+			id="df684d78-cb92-496c-8c52-f1f6356e4891"
+			name="SwitchToSensor"
+			refimgid="b6449b65-cbf5-40b6-9fe7-829f22371d13"
+			searchtimeout="30000ms">
+				/form[@title='Snap-X - [Untitled]']/container[@controlid='59648']/form[@title='Untitled']/?/?/element[@controlid='59650']/element[@controlid='59648']/toolbar[@controlid='59392']/button[@commandid='40029']
+			</item>
 			<basepath>
 				/form[@title='Snap-X - [Untitled]']
 			</basepath>

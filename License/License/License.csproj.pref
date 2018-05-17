@@ -7,5 +7,7 @@
     <Element value="License.rxtst" />
     <Element value="Recording1.rxrec" />
   </Array>
-  <Properties name="projectSavedData" />
+  <Properties name="projectSavedData">
+    <Array name="recentusercodeselections" />
+  </Properties>
 </Properties>

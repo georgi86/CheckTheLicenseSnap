@@ -96,7 +96,9 @@ namespace License
         [RepositoryFolder("e7f216c4-4f15-48b0-8400-975af4e7fa17")]
         public partial class SnapXUntitledAppFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _element94Info;
+            RepoItemInfo _snapxuntitledInfo;
+            RepoItemInfo _measuretextInfo;
+            RepoItemInfo _switchtosensorInfo;
 
             /// <summary>
             /// Creates a new SnapXUntitled  folder.
@@ -104,7 +106,9 @@ namespace License
             public SnapXUntitledAppFolder(RepoGenBaseFolder parentFolder) :
                     base("SnapXUntitled", "/form[@title='Snap-X - [Untitled]']", parentFolder, 30000, null, true, "e7f216c4-4f15-48b0-8400-975af4e7fa17", "")
             {
-                _element94Info = new RepoItemInfo(this, "Element94", "element[@controlid='94']", 30000, null, "cdd2442b-1522-4f81-9b36-c35233e1647b");
+                _snapxuntitledInfo = new RepoItemInfo(this, "SnapXUntitled", "element[@controlid='94']", 30000, null, "4607a55b-1ace-4ee6-b6c0-fcd4792c88cb");                
+                _measuretextInfo = new RepoItemInfo(this, "MeasureText", "container[@controlid='59648']/form[@title='Untitled']//text[@controlid='2394']", 30000, null, "3bf47ce7-aba4-4b05-9696-f5829ed08b6f");
+                _switchtosensorInfo = new RepoItemInfo(this, "SwitchToSensor", "container[@controlid='59648']/form[@title='Untitled']/?/?/element[@controlid='59650']/element[@controlid='59648']/toolbar[@controlid='59392']/button[@commandid='40029']", 30000, null, "df684d78-cb92-496c-8c52-f1f6356e4891");
             }
 
             /// <summary>
@@ -134,24 +138,72 @@ namespace License
             /// <summary>
             /// The SnapXUntitled item.
             /// </summary>
-            [RepositoryItem("587e88dd-b9ff-4307-9db2-b6ba96b959f3")]
-            public virtual Ranorex.Unknown Element94
+            [RepositoryItem("4607a55b-1ace-4ee6-b6c0-fcd4792c88cb")]
+            public virtual Ranorex.Unknown SnapXUntitled
             {
                 get
                 {
-                    return _element94Info.CreateAdapter<Ranorex.Unknown>(true);
+                    return _snapxuntitledInfo.CreateAdapter<Ranorex.Unknown>(true);
                 }
             }
 
             /// <summary>
-            /// The Element94 item info.
+            /// The SnapXUntitled item info.
             /// </summary>
-            [RepositoryItemInfo("cdd2442b-1522-4f81-9b36-c35233e1647b")]
-            public virtual RepoItemInfo Element94Info
+            [RepositoryItemInfo("4607a55b-1ace-4ee6-b6c0-fcd4792c88cb")]
+            public virtual RepoItemInfo SnapXUntitledInfo
             {
                 get
                 {
-                    return _element94Info;
+                    return _snapxuntitledInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MeasureText item.
+            /// </summary>
+            [RepositoryItem("3bf47ce7-aba4-4b05-9696-f5829ed08b6f")]
+            public virtual Ranorex.Text MeasureText
+            {
+                get
+                {
+                    return _measuretextInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MeasureText item info.
+            /// </summary>
+            [RepositoryItemInfo("3bf47ce7-aba4-4b05-9696-f5829ed08b6f")]
+            public virtual RepoItemInfo MeasureTextInfo
+            {
+                get
+                {
+                    return _measuretextInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SwitchToSensor item.
+            /// </summary>
+            [RepositoryItem("df684d78-cb92-496c-8c52-f1f6356e4891")]
+            public virtual Ranorex.Button SwitchToSensor
+            {
+                get
+                {
+                    return _switchtosensorInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SwitchToSensor item info.
+            /// </summary>
+            [RepositoryItemInfo("df684d78-cb92-496c-8c52-f1f6356e4891")]
+            public virtual RepoItemInfo SwitchToSensorInfo
+            {
+                get
+                {
+                    return _switchtosensorInfo;
                 }
             }
         }

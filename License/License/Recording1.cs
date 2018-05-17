@@ -73,9 +73,9 @@ namespace License
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", "7.0")]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 500;
-            Keyboard.DefaultKeyPressTime = 200;
-            Delay.SpeedFactor = 2.00;
+            Mouse.DefaultMoveTime = 300;
+            Keyboard.DefaultKeyPressTime = 100;
+            Delay.SpeedFactor = 1.00;
 
             Init();
 
@@ -83,22 +83,46 @@ namespace License
             //Host.Local.RunApplication("C:\\QVI\\Snap-X\\SnapXOffline.bat", "", "C:\\QVI\\Snap-X", false);
             //Delay.Milliseconds(0);
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.Element94' at 320;17.", repo.SnapXUntitled.Element94Info, new RecordItemIndex(0));
-            repo.SnapXUntitled.Element94.Click("320;17");
+            string strBigModeCaptionText = "Measure";
+
+            bool bBigMode = true;
+
+            try
+            {
+                Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.MeasureText' at Center.", repo.SnapXUntitled.MeasureTextInfo, new RecordItemIndex(1));
+                repo.SnapXUntitled.MeasureText.MoveTo();
+                Delay.Milliseconds(200);
+
+                bBigMode = repo.SnapXUntitled.MeasureText.TextValue.CompareTo(strBigModeCaptionText) == 0 && repo.SnapXUntitled.MeasureText.Visible;
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            if (!bBigMode)
+            {
+                repo.SnapXUntitled.SwitchToSensor.Click();
+                Delay.Milliseconds(200);
+            }
+
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.SnapXUntitled' at Center.", repo.SnapXUntitled.SnapXUntitledInfo, new RecordItemIndex(2));
+            repo.SnapXUntitled.SnapXUntitled.Click();
             Delay.Milliseconds(200);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LMenu}'.", new RecordItemIndex(2));
             Keyboard.Press("{LMenu}");
             Delay.Milliseconds(0);
-            
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'h'.", new RecordItemIndex(3));
             Keyboard.Press("h");
             Delay.Milliseconds(0);
-            
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'a'.", new RecordItemIndex(4));
             Keyboard.Press("a");
             Delay.Milliseconds(0);
-            
+
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AboutSNAPX.HelpAbout' at 249;64.", repo.AboutSNAPX.HelpAboutInfo, new RecordItemIndex(5));
             repo.AboutSNAPX.HelpAbout.Click("249;64");
             Delay.Milliseconds(200);
@@ -111,13 +135,13 @@ namespace License
             Keyboard.Press("{Escape}");
             Delay.Milliseconds(0);
 
-            Host.Current.CloseApplication(repo.SnapXUntitled.Self, new Duration(100));
-            Delay.Milliseconds(100);
-            
+            //Host.Current.CloseApplication(repo.SnapXUntitled.Self, new Duration(100));
+            //Delay.Milliseconds(100);
+
         }
 
-#region Image Feature Data
-#endregion
+        #region Image Feature Data
+        #endregion
     }
 #pragma warning restore 0436
 }
