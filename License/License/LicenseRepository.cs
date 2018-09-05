@@ -104,7 +104,7 @@ namespace License
             /// Creates a new SnapXUntitled  folder.
             /// </summary>
             public SnapXUntitledAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("SnapXUntitled", "/form[@title='Snap-X - [Untitled]']", parentFolder, 30000, null, true, "e7f216c4-4f15-48b0-8400-975af4e7fa17", "")
+                    base("SNAPXUntitled", "/form[@title='SNAP-X - [Untitled]']", parentFolder, 30000, null, true, "e7f216c4-4f15-48b0-8400-975af4e7fa17", "")
             {
                 _snapxuntitledInfo = new RepoItemInfo(this, "SnapXUntitled", "element[@controlid='94']", 30000, null, "4607a55b-1ace-4ee6-b6c0-fcd4792c88cb");                
                 _measuretextInfo = new RepoItemInfo(this, "MeasureText", "container[@controlid='59648']/form[@title='Untitled']//text[@controlid='2394']", 30000, null, "3bf47ce7-aba4-4b05-9696-f5829ed08b6f");
